@@ -77,7 +77,11 @@ def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, win
     
     
     
-    
+print('Rate r&b from 0 to 5:')
+rb = int(input())
+
+print('Rate rock from 0 to 5:')
+rock = int(input())    
     
     
     
