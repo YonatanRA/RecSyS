@@ -53,7 +53,7 @@ def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, win
              party, trips, running, gym, golf, basket, football, yoga, metric]
     
     
-    n_user={k:v for k, v in list(zip(tags, n_rating[0]))}
+    n_user={k:v for k, v in list(zip(tags, rating))}
     n_user['id']='id__'+str(len(s_data.id)+1)
     n_user['plan']=0
     
