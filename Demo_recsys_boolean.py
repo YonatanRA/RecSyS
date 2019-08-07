@@ -104,16 +104,16 @@ theater = int(input())
 print('Rate beers :')
 beers = int(input())
 
-print('Rate wine from 0 to 5:')
+print('Rate wine :')
 wine = int(input())
 
-print('Rate party from 0 to 5:')
+print('Rate party :')
 party = int(input())
 
-print('Rate trips from 0 to 5:')
+print('Rate trips :')
 trips = int(input())
 
-print('Rate running from 0 to 5:')
+print('Rate running :')
 running = int(input())
 
 print('Rate gym from 0 to 5:')
