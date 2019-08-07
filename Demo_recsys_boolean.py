@@ -116,19 +116,19 @@ trips = int(input())
 print('Rate running :')
 running = int(input())
 
-print('Rate gym from 0 to 5:')
+print('Rate gym :')
 gym = int(input())
 
-print('Rate golf from 0 to 5:')
+print('Rate golf :')
 golf = int(input())
 
-print('Rate basket from 0 to 5:')
+print('Rate basket :')
 basket = int(input())
 
-print('Rate football from 0 to 5:')
+print('Rate football :')
 football = int(input())
 
-print('Rate yoga from 0 to 5:')
+print('Rate yoga :')
 yoga = int(input())
 
 
