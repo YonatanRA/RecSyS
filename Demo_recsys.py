@@ -83,8 +83,42 @@ rb = int(input())
 print('Rate rock from 0 to 5:')
 rock = int(input())    
     
+print('Rate jazz from 0 to 5:')
+jazz = int(input())
+
+print('Rate techno from 0 to 5:')
+techno = int(input())  
     
-    
+print('Rate pop from 0 to 5:')
+pop = int(input())
+
+print('Rate indie from 0 to 5:')
+indie = int(input())
+
+print('Rate cinema from 0 to 5:')
+cinema = int(input())
+
+print('Rate theater from 0 to 5:')
+theater = int(input())
+
+print('Rate beers from 0 to 5:')
+beers = int(input())
+
+print('Rate wine from 0 to 5:')
+wine = int(input())
+
+print('Rate party from 0 to 5:')
+party = int(input())
+
+
+
+
+
+
+
+
+
+
 
 
 
