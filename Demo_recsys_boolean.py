@@ -77,31 +77,31 @@ def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, win
     
     
     
-print('Rate r&b from 0 to 5:')
+print('Rate r&b :')
 rb = int(input())
 
-print('Rate rock from 0 to 5:')
+print('Rate rock :')
 rock = int(input())    
     
-print('Rate jazz from 0 to 5:')
+print('Rate jazz :')
 jazz = int(input())
 
-print('Rate techno from 0 to 5:')
+print('Rate techno :')
 techno = int(input())  
     
-print('Rate pop from 0 to 5:')
+print('Rate pop from :')
 pop = int(input())
 
-print('Rate indie from 0 to 5:')
+print('Rate indie :')
 indie = int(input())
 
-print('Rate cinema from 0 to 5:')
+print('Rate cinema :')
 cinema = int(input())
 
-print('Rate theater from 0 to 5:')
+print('Rate theater :')
 theater = int(input())
 
-print('Rate beers from 0 to 5:')
+print('Rate beers :')
 beers = int(input())
 
 print('Rate wine from 0 to 5:')
