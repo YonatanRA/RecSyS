@@ -110,6 +110,26 @@ wine = int(input())
 print('Rate party from 0 to 5:')
 party = int(input())
 
+print('Rate trips from 0 to 5:')
+trips = int(input())
+
+print('Rate running from 0 to 5:')
+running = int(input())
+
+print('Rate gym from 0 to 5:')
+gym = int(input())
+
+print('Rate golf from 0 to 5:')
+golf = int(input())
+
+print('Rate basket from 0 to 5:')
+basket = int(input())
+
+print('Rate football from 0 to 5:')
+football = int(input())
+
+print('Rate yoga from 0 to 5:')
+yoga = int(input())
 
 
 
@@ -118,14 +138,32 @@ party = int(input())
 
 
 
+# metrics for squareform
+
+'''
+'euclidean', 'minkowski', 'cityblock', 'seuclidean', 'sqeuclidean', 'cosine', 'correlation'
+
+'hamming', 'jaccard', 'chebyshev', 'canberra', 'braycurtis', 'mahalanobis', 'yule'
+
+'matching', 'dice', 'kulsinski', 'rogerstanimoto', 'russellrao', 'sokalmichener'
+
+'sokalsneath', 'wminkowski'
+'''
+
+
+metric='cosine' 
 
 
 
 
+# plans (users)
+
+plans=new_user(s_data, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
+               party, trips, running, gym, golf, basket, football, yoga, metric)
 
 
 
-
+print (plans)
 
 
 
