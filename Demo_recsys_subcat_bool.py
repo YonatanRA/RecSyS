@@ -57,8 +57,8 @@ for i in range(len(s_data)):
 
 
 def new_user(df, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
-             party, trips, running, gym, golf, basket, football, yoga, metric,
-             techno, electro_funky, house, minimal, dubstep, DandB):
+             party, trips, running, gym, golf, basket, football, yoga,
+             techno, electro_funky, house, minimal, dubstep, DandB, metric):
     
     
     tags=['r&b', 'rock', 'jazz', 'electronic', 'pop', 'indie',
@@ -69,7 +69,7 @@ def new_user(df, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers,
     
     
     rating=[rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
-            party, trips, running, gym, golf, basket, football, yoga, metric,
+            party, trips, running, gym, golf, basket, football, yoga, 
             techno, electro_funky, house, minimal, dubstep, DandB]
     
     
@@ -208,13 +208,14 @@ metric='cosine'
 # plans (users)
 
 plans=new_user(s_data, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
-               party, trips, running, gym, golf, basket, football, yoga, metric, 
-               techno, electro_funky, house, minimal, dubstep, DandB)
+               party, trips, running, gym, golf, basket, football, yoga, 
+               techno, electro_funky, house, minimal, dubstep, DandB, metric)
 
 
 
 print (plans)
 
 
+0
 
 
