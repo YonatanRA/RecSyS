@@ -18,7 +18,7 @@ from scipy.spatial.distance import pdist, squareform
 
 names=['id__'+str(i) for i in range(3000)]
 
-tags=['r&b', 'rock', 'jazz', 'techno', 'pop', 'indie',
+tags=['r&b', 'rock', 'jazz', 'electronica', 'pop', 'indie',
       'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
       'running', 'gym', 'golf', 'basket', 'football', 'yoga']
 
@@ -38,16 +38,16 @@ s_data['id']=[i for i in range(len(names))]
 # new user function
 
 
-def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
+def new_user(df, rb, rock, jazz, electronica, pop, indie, cinema, theater, beers, wine,
              party, trips, running, gym, golf, basket, football, yoga, metric):
     
     
-    tags=['r&b', 'rock', 'jazz', 'techno', 'pop', 'indie',
+    tags=['r&b', 'rock', 'jazz', 'electronica', 'pop', 'indie',
           'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
           'running', 'gym', 'golf', 'basket', 'football', 'yoga']
     
     
-    rating=[rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
+    rating=[rb, rock, jazz, electronica, pop, indie, cinema, theater, beers, wine,
              party, trips, running, gym, golf, basket, football, yoga, metric]
     
     
@@ -83,8 +83,8 @@ rock = int(input())
 print('Rate jazz :')
 jazz = int(input())
 
-print('Rate techno :')
-techno = int(input())  
+print('Rate electronica :')
+electronica = int(input())  
     
 print('Rate pop from :')
 pop = int(input())
@@ -155,7 +155,7 @@ metric='cosine'
 
 # plans (users)
 
-plans=new_user(s_data, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
+plans=new_user(s_data, rb, rock, jazz, electronica, pop, indie, cinema, theater, beers, wine,
                party, trips, running, gym, golf, basket, football, yoga, metric)
 
 
