@@ -34,8 +34,8 @@ s_data=pd.DataFrame(data, columns=tags, index=names)
 s_data['plan']=np.random.randint(0, 2, (len(names), 1))
 s_data['id']=[i for i in range(len(names))]
 
+sub_data=np.random.randint(0, 1, (len(names), len(sub_tags_elec)))
 
-print (s_data.loc[s_data.electronica==1])
 
 
 
