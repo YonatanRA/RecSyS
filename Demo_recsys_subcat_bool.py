@@ -23,6 +23,7 @@ tags=['r&b', 'rock', 'jazz', 'electronica', 'pop', 'indie',
       'running', 'gym', 'golf', 'basket', 'football', 'yoga']
 
 
+sub_tags_elec=['techno', 'electro funky', 'house', 'minimal', 'dubstep', 'D&B']
 
 
 
