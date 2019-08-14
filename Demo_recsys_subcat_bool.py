@@ -34,6 +34,10 @@ s_data['plan']=np.random.randint(0, 2, (len(names), 1))
 s_data['id']=[i for i in range(len(names))]
 
 
+print (s_data.loc[s_data.electronica==1])
+
+
+
 
 # new user function
 
