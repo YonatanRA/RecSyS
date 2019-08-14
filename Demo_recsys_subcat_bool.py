@@ -218,6 +218,6 @@ plans=new_user(s_data, rb, rock, jazz, electronic, pop, indie, cinema, theater, 
 print (plans)
 
 
-0
+
 
 
