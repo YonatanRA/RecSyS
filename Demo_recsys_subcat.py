@@ -22,8 +22,9 @@ tags=['r&b', 'rock', 'jazz', 'electronic', 'pop', 'indie',
       'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
       'running', 'gym', 'golf', 'basket', 'football', 'yoga']
 
-
 sub_tags_elec=['techno', 'electro_funky', 'house', 'minimal', 'dubstep', 'DandB']
+
+
 
 
 
