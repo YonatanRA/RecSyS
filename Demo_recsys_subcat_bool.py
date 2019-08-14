@@ -18,24 +18,37 @@ from scipy.spatial.distance import pdist, squareform
 
 names=['id__'+str(i) for i in range(3000)]
 
-tags=['r&b', 'rock', 'jazz', 'electronica', 'pop', 'indie',
+tags=['r&b', 'rock', 'jazz', 'electronic', 'pop', 'indie',
       'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
       'running', 'gym', 'golf', 'basket', 'football', 'yoga']
 
 
-sub_tags_elec=['techno', 'electro funky', 'house', 'minimal', 'dubstep', 'D&B']
+sub_tags_elec=['techno', 'electro_funky', 'house', 'minimal', 'dubstep', 'DandB']
 
 
 
 # synth data
 
 data=np.random.randint(0, 2, (len(names), len(tags)))
+sub_data=np.random.randint(0, 1, (len(names), len(sub_tags_elec)))
+
 s_data=pd.DataFrame(data, columns=tags, index=names)
+s_sub_data=pd.DataFrame(sub_data, columns=sub_tags_elec, index=names)
+
+s_data=pd.concat([s_data, s_sub_data], axis=1)
+
 s_data['plan']=np.random.randint(0, 2, (len(names), 1))
 s_data['id']=[i for i in range(len(names))]
 
-sub_data=np.random.randint(0, 1, (len(names), len(sub_tags_elec)))
 
+for i in range(len(s_data)):
+	if s_data.electronic[i]==1:
+		s_data.techno[i]=np.random.randint(0, 2)
+		s_data.electro_funky[i]=np.random.randint(0, 2)
+		s_data.house[i]=np.random.randint(0, 2)
+		s_data.minimal[i]=np.random.randint(0, 2)
+		s_data.dubstep[i]=np.random.randint(0, 2)
+		s_data.DandB[i]=np.random.randint(0, 2)
 
 
 
@@ -43,17 +56,21 @@ sub_data=np.random.randint(0, 1, (len(names), len(sub_tags_elec)))
 # new user function
 
 
-def new_user(df, rb, rock, jazz, electronica, pop, indie, cinema, theater, beers, wine,
-             party, trips, running, gym, golf, basket, football, yoga, metric):
+def new_user(df, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
+             party, trips, running, gym, golf, basket, football, yoga, metric,
+             techno, electro_funky, house, minimal, dubstep, DandB):
     
     
-    tags=['r&b', 'rock', 'jazz', 'electronica', 'pop', 'indie',
+    tags=['r&b', 'rock', 'jazz', 'electronic', 'pop', 'indie',
           'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
-          'running', 'gym', 'golf', 'basket', 'football', 'yoga']
+          'running', 'gym', 'golf', 'basket', 'football', 'yoga',
+          'techno', 'electro_funky', 'house', 'minimal', 'dubstep', 'DandB']
     
     
-    rating=[rb, rock, jazz, electronica, pop, indie, cinema, theater, beers, wine,
-             party, trips, running, gym, golf, basket, football, yoga, metric]
+    
+    rating=[rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
+            party, trips, running, gym, golf, basket, football, yoga, metric,
+            techno, electro_funky, house, minimal, dubstep, DandB]
     
     
     n_user={k:v for k, v in list(zip(tags, rating))}
@@ -88,9 +105,39 @@ rock = int(input())
 print('Rate jazz :')
 jazz = int(input())
 
-print('Rate electronica :')
-electronica = int(input())  
-    
+print('Rate electronic :')
+electronic = int(input())  
+  
+if electronic==1:
+	 print('Rate techno :')
+	 techno = int(input())
+	 
+	 print('Rate electro-funky :')
+	 electro_funky = int(input())
+	 
+	 print('Rate house :')
+	 house = int(input())
+	 
+	 print('Rate minimal :')
+	 minimal = int(input())
+	 
+	 print('Rate dubstep :')
+	 dubstep = int(input())
+	 
+	 print('Rate D&B :')
+	 DandB = int(input())
+
+
+else:
+	 techno = 0
+	 electro_funky = 0
+	 house = 0
+	 minimal = 0
+	 dubstep = 0
+	 DandB = 0
+
+
+
 print('Rate pop from :')
 pop = int(input())
 
@@ -160,8 +207,9 @@ metric='cosine'
 
 # plans (users)
 
-plans=new_user(s_data, rb, rock, jazz, electronica, pop, indie, cinema, theater, beers, wine,
-               party, trips, running, gym, golf, basket, football, yoga, metric)
+plans=new_user(s_data, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
+               party, trips, running, gym, golf, basket, football, yoga, metric, 
+               techno, electro_funky, house, minimal, dubstep, DandB)
 
 
 
