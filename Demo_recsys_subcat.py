@@ -1,4 +1,4 @@
-# Demo recsys
+# Demo recsys boolean (0-1)
 
 
 
@@ -18,21 +18,37 @@ from scipy.spatial.distance import pdist, squareform
 
 names=['id__'+str(i) for i in range(3000)]
 
-tags=['r&b', 'rock', 'jazz', 'techno', 'pop', 'indie',
+tags=['r&b', 'rock', 'jazz', 'electronic', 'pop', 'indie',
       'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
       'running', 'gym', 'golf', 'basket', 'football', 'yoga']
 
 
+sub_tags_elec=['techno', 'electro_funky', 'house', 'minimal', 'dubstep', 'DandB']
 
 
 
 # synth data
 
 data=np.random.randint(0, 6, (len(names), len(tags)))
+sub_data=np.random.randint(0, 1, (len(names), len(sub_tags_elec)))
+
 s_data=pd.DataFrame(data, columns=tags, index=names)
+s_sub_data=pd.DataFrame(sub_data, columns=sub_tags_elec, index=names)
+
+s_data=pd.concat([s_data, s_sub_data], axis=1)
+
 s_data['plan']=np.random.randint(0, 2, (len(names), 1))
 s_data['id']=[i for i in range(len(names))]
 
+
+for i in range(len(s_data)):
+	if s_data.electronic[i]==1:
+		s_data.techno[i]=np.random.randint(0, 6)
+		s_data.electro_funky[i]=np.random.randint(0, 6)
+		s_data.house[i]=np.random.randint(0, 6)
+		s_data.minimal[i]=np.random.randint(0, 6)
+		s_data.dubstep[i]=np.random.randint(0, 6)
+		s_data.DandB[i]=np.random.randint(0, 6)
 
 
 
@@ -40,17 +56,21 @@ s_data['id']=[i for i in range(len(names))]
 # new user function
 
 
-def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
-             party, trips, running, gym, golf, basket, football, yoga, metric):
+def new_user(df, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
+             party, trips, running, gym, golf, basket, football, yoga,
+             techno, electro_funky, house, minimal, dubstep, DandB, metric):
     
     
-    tags=['r&b', 'rock', 'jazz', 'techno', 'pop', 'indie',
+    tags=['r&b', 'rock', 'jazz', 'electronic', 'pop', 'indie',
           'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
-          'running', 'gym', 'golf', 'basket', 'football', 'yoga']
+          'running', 'gym', 'golf', 'basket', 'football', 'yoga',
+          'techno', 'electro_funky', 'house', 'minimal', 'dubstep', 'DandB']
     
     
-    rating=[rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
-             party, trips, running, gym, golf, basket, football, yoga]
+    
+    rating=[rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
+            party, trips, running, gym, golf, basket, football, yoga, 
+            techno, electro_funky, house, minimal, dubstep, DandB]
     
     
     n_user={k:v for k, v in list(zip(tags, rating))}
@@ -76,7 +96,6 @@ def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, win
     
     
     
-    
 print('Rate r&b from 0 to 5:')
 rb = int(input())
 
@@ -86,10 +105,40 @@ rock = int(input())
 print('Rate jazz from 0 to 5:')
 jazz = int(input())
 
-print('Rate techno from 0 to 5:')
-techno = int(input())  
-    
-print('Rate pop from 0 to 5:')
+print('Rate electronic from 0 to 5:')
+electronic = int(input())  
+  
+if electronic!=0:
+	 print('Rate techno from 0 to 5:')
+	 techno = int(input())
+	 
+	 print('Rate electro-funky from 0 to 5:')
+	 electro_funky = int(input())
+	 
+	 print('Rate house from 0 to 5:')
+	 house = int(input())
+	 
+	 print('Rate minimal from 0 to 5:')
+	 minimal = int(input())
+	 
+	 print('Rate dubstep from 0 to 5:')
+	 dubstep = int(input())
+	 
+	 print('Rate D&B from 0 to 5:')
+	 DandB = int(input())
+
+
+else:
+	 techno = 0
+	 electro_funky = 0
+	 house = 0
+	 minimal = 0
+	 dubstep = 0
+	 DandB = 0
+
+
+
+print('Rate pop from from 0 to 5:')
 pop = int(input())
 
 print('Rate indie from 0 to 5:')
@@ -158,13 +207,15 @@ metric='cosine'
 
 # plans (users)
 
-plans=new_user(s_data, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
-               party, trips, running, gym, golf, basket, football, yoga, metric)
+plans=new_user(s_data, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
+               party, trips, running, gym, golf, basket, football, yoga, 
+               techno, electro_funky, house, minimal, dubstep, DandB, metric)
 
 
 
 print (plans)
 
 
+0
 
 
