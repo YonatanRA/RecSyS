@@ -50,7 +50,18 @@ for i in range(len(s_data)):
 		s_data.dubstep[i]=np.random.randint(0, 2)
 		s_data.DandB[i]=np.random.randint(0, 2)
 
-print (s_data.techno)
+
+
+#  weighing
+
+for e in tags:
+	s_data.e=s_data.e*2/3
+
+for e in sub_tags_elec:
+	s_data.e=s_data.e*1/3
+
+
+print (s_data)
 
 
 
