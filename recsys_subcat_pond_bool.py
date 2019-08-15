@@ -61,7 +61,7 @@ for e in sub_tags_elec:
 	s_data[e]=s_data[e]*1/3
 
 
-print (s_data)
+#print (s_data)
 
 
 
@@ -119,26 +119,26 @@ print('Rate jazz :')
 jazz = int(input())*2/3
 
 print('Rate electronic :')
-electronic = int(input())  
+electronic = int(input())*2/3  
   
 if electronic!=0:
 	 print('Rate techno :')
-	 techno = int(input())
+	 techno = int(input())*1/3
 	 
 	 print('Rate electro-funky :')
-	 electro_funky = int(input())
+	 electro_funky = int(input())*1/3
 	 
 	 print('Rate house :')
-	 house = int(input())
+	 house = int(input())*1/3
 	 
 	 print('Rate minimal :')
-	 minimal = int(input())
+	 minimal = int(input())*1/3
 	 
 	 print('Rate dubstep :')
-	 dubstep = int(input())
+	 dubstep = int(input())*1/3
 	 
 	 print('Rate D&B :')
-	 DandB = int(input())
+	 DandB = int(input())*1/3
 
 
 else:
@@ -152,46 +152,46 @@ else:
 
 
 print('Rate pop from :')
-pop = int(input())
+pop = int(input())*2/3
 
 print('Rate indie :')
-indie = int(input())
+indie = int(input())*2/3
 
 print('Rate cinema :')
-cinema = int(input())
+cinema = int(input())*2/3
 
 print('Rate theater :')
-theater = int(input())
+theater = int(input())*2/3
 
 print('Rate beers :')
-beers = int(input())
+beers = int(input())*2/3
 
 print('Rate wine :')
-wine = int(input())
+wine = int(input())*2/3
 
 print('Rate party :')
-party = int(input())
+party = int(input())*2/3
 
 print('Rate trips :')
-trips = int(input())
+trips = int(input())*2/3
 
 print('Rate running :')
-running = int(input())
+running = int(input())*2/3
 
 print('Rate gym :')
-gym = int(input())
+gym = int(input())*2/3
 
 print('Rate golf :')
-golf = int(input())
+golf = int(input())*2/3
 
 print('Rate basket :')
-basket = int(input())
+basket = int(input())*2/3
 
 print('Rate football :')
-football = int(input())
+football = int(input())*2/3
 
 print('Rate yoga :')
-yoga = int(input())
+yoga = int(input())*2/3
 
 
 
