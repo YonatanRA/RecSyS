@@ -55,10 +55,10 @@ for i in range(len(s_data)):
 #  weighing
 
 for e in tags:
-	s_data.e=s_data.e*2/3
+	s_data[e]=s_data[e]*2/3
 
 for e in sub_tags_elec:
-	s_data.e=s_data.e*1/3
+	s_data[e]=s_data[e]*1/3
 
 
 print (s_data)
