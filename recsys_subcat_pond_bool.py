@@ -110,18 +110,18 @@ def new_user(df, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers,
     
     
 print('Rate r&b :')
-rb = int(input())
+rb = int(input())*2/3
 
 print('Rate rock :')
-rock = int(input())    
+rock = int(input())*2/3    
     
 print('Rate jazz :')
-jazz = int(input())
+jazz = int(input())*2/3
 
 print('Rate electronic :')
 electronic = int(input())  
   
-if electronic==1:
+if electronic!=0:
 	 print('Rate techno :')
 	 techno = int(input())
 	 
