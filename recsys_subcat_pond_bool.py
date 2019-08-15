@@ -42,7 +42,7 @@ s_data['id']=[i for i in range(len(names))]
 
 
 for i in range(len(s_data)):
-	if s_data.electronic[i]==1:
+	if s_data.electronic[i]!=0:
 		s_data.techno[i]=np.random.randint(0, 2)
 		s_data.electro_funky[i]=np.random.randint(0, 2)
 		s_data.house[i]=np.random.randint(0, 2)
@@ -50,7 +50,7 @@ for i in range(len(s_data)):
 		s_data.dubstep[i]=np.random.randint(0, 2)
 		s_data.DandB[i]=np.random.randint(0, 2)
 
-
+print (s_data.techno)
 
 
 
