@@ -64,7 +64,6 @@ for e in sub_tags_elec:
 #print (s_data)
 
 
-
 # new user function
 
 
