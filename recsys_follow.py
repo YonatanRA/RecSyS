@@ -227,4 +227,53 @@ print (plans)
 
 
 
+# follow-unfollow users
+
+def follow(_id, b, plans):
+    if b==0: return plans
+    elif b==1:
+        for e in plans:
+            if _id==e[0]:
+                e[1]+=e[1]*0.15
+        for e in plans:
+            if e[1]>1:e[1]=1
+        return plans
+
+
+def unfollow(_id, b, plans):
+    if b==0: return plans
+    elif b==1:
+        for e in plans:
+            if _id==e[0]:
+                e[1]-=e[1]*0.15
+        for e in plans:
+            if e[1]<0:e[1]=0
+        return plans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
