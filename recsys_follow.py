@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial.distance import pdist, squareform
+from operator import itemgetter
 
 
 
@@ -222,7 +223,9 @@ plans=new_user(s_data, rb, rock, jazz, electronic, pop, indie, cinema, theater, 
                party, trips, running, gym, golf, basket, football, yoga, 
                techno, electro_funky, house, minimal, dubstep, DandB, metric)
 
-print (plans)
+print ('Users with plan : ')
+for e in plans:
+	print (e[0])
 
 
 
@@ -237,7 +240,7 @@ def follow(_id, b, plans):
                 e[1]+=e[1]*0.15
         for e in plans:
             if e[1]>1:e[1]=1
-        return plans
+        return sorted(plans, key=itemgetter(1), reverse=True)
 
 
 def unfollow(_id, b, plans):
@@ -248,10 +251,14 @@ def unfollow(_id, b, plans):
                 e[1]-=e[1]*0.15
         for e in plans:
             if e[1]<0:e[1]=0
-        return plans
+        return sorted(plans, key=itemgetter(1), reverse=True)
 
 
-
+print ()
+for e in plans:
+	print ('Follow user {}?'.format(e[0]))
+	b=int(input())
+	print (follow(e[0], b, plans))
 
 
 
