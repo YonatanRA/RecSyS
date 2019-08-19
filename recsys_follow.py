@@ -247,7 +247,7 @@ def follow(_id, b, foll):
 				e[1]+=e[1]*0.15
 		for e in foll:
 			if e[1]>1:e[1]=1
-		return sorted(foll, key=itemgetter(1), reverse=True)
+		return foll#sorted(foll, key=itemgetter(1), reverse=True)
 
 print ()
 for e in foll:
@@ -270,7 +270,7 @@ def unfollow(_id, b, unfoll):
 				e[1]-=e[1]*0.15
 		for e in unfoll:
 			if e[1]<0:e[1]=0
-		return sorted(unfoll, key=itemgetter(1), reverse=True)
+		return unfoll#sorted(unfoll, key=itemgetter(1), reverse=True)
 
 print ()
 for e in unfoll:
