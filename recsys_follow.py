@@ -259,9 +259,15 @@ for e in plans:
 	print ('Follow user {}?'.format(e[0]))
 	b=int(input())
 	print (follow(e[0], b, plans))
+	print()
 
 
-
+print ()
+for e in plans:
+	print ('Unollow user {}?'.format(e[0]))
+	b=int(input())
+	print (unfollow(e[0], b, plans))
+	print()
 
 
 
