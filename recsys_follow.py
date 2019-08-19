@@ -256,7 +256,7 @@ for e in foll:
 	f=follow(e[0], b, foll)
 	print (f)
 	print()
-final['follow_id']=[e[0] for e in f]
+#final['follow_id']=[e[0] for e in f]
 final['follow_rate']=[e[1] for e in f]
 
 
@@ -279,12 +279,13 @@ for e in unfoll:
 	u=unfollow(e[0], b, unfoll)
 	print (u)
 	print()
-final['unfollow_id']=[e[0] for e in u]
+#final['unfollow_id']=[e[0] for e in u]
 final['unfollow_rate']=[e[1] for e in u]
 print (final)
 
 
 
+final.iplot(kind='bar', x='plan_ori_id')
 
 
 
