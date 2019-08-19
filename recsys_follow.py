@@ -238,45 +238,52 @@ for e in plans:
 # follow-unfollow users
 
 def follow(_id, b, plans):
-    if b==0: return plans
-    elif b==1:
-        for e in plans:
-            if _id==e[0]:
-                e[1]+=e[1]*0.15
-        for e in plans:
-            if e[1]>1:e[1]=1
-        return sorted(plans, key=itemgetter(1), reverse=True)
+	foll=plans
+	if b==0: return foll
+	elif b==1:
+		for e in foll:
+			if _id==e[0]:
+				e[1]+=e[1]*0.15
+		for e in foll:
+			if e[1]>1:e[1]=1
+		return sorted(foll, key=itemgetter(1), reverse=True)
 
 
 def unfollow(_id, b, plans):
-    if b==0: return plans
-    elif b==1:
-        for e in plans:
-            if _id==e[0]:
-                e[1]-=e[1]*0.15
-        for e in plans:
-            if e[1]<0:e[1]=0
-        return sorted(plans, key=itemgetter(1), reverse=True)
+	unfoll=plans
+	if b==0: return unfoll
+	elif b==1:
+		for e in unfoll:
+			if _id==e[0]:
+				e[1]-=e[1]*0.15
+		for e in unfoll:
+			if e[1]<0:e[1]=0
+		return sorted(unfoll, key=itemgetter(1), reverse=True)
 
 
 print ()
 for e in plans:
 	print ('Follow user {}?'.format(e[0]))
 	b=int(input())
-	print (follow(e[0], b, plans))
+	f=follow(e[0], b, plans)
+	print (f)
 	print()
 
 
 print ()
 for e in plans:
-	print ('Unollow user {}?'.format(e[0]))
+	print ('Unfollow user {}?'.format(e[0]))
 	b=int(input())
-	print (unfollow(e[0], b, plans))
+	u=unfollow(e[0], b, plans)
+	print (u)
 	print()
 
 
-
-
+final=pd.DataFrame()
+final['plan_ori']=[e[1] for e in plans]
+final['follow']=[e[1] for e in f]
+final['unfollow']=[e[1] for e in u]
+print (final)
 
 
 
