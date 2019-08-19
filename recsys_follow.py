@@ -11,6 +11,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial.distance import pdist, squareform
 from operator import itemgetter
+import plotly.plotly as py
+import cufflinks as cf
+cf.go_offline()
+
+
 
 
 
