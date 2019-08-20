@@ -62,8 +62,8 @@ for e in sub_tags_elec:
 
 
 
-# new user function
 
+# new user function
 
 def new_user(df, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
              party, trips, running, gym, golf, basket, football, yoga,
