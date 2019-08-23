@@ -61,8 +61,6 @@ for e in sub_tags_elec:
 	s_data[e]=s_data[e]*1/3
 
 
-
-
 # new user function
 
 def new_user(df, rb, rock, jazz, electronic, pop, indie, cinema, theater, beers, wine,
