@@ -52,7 +52,6 @@ for i in range(len(s_data)):
 
 
 
-
 #  weighing
 
 for e in tags:
