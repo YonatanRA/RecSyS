@@ -59,7 +59,6 @@ for e in tags:
 
 for e in sub_tags_elec:
 	s_data[e]=s_data[e]*1/3
-	
 
 	
 	
