@@ -60,6 +60,7 @@ def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, win
     names.append(n_user['id'])
     df.index=names
     
+    
     similar = pd.DataFrame(1/(1 + squareform(pdist(df.iloc[:, :-2], metric))), 
                          index=df.index, columns=df.index)
 
