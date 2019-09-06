@@ -40,8 +40,7 @@ s_data['id']=[i for i in range(len(names))]
 
 def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
              party, trips, running, gym, golf, basket, football, yoga, metric):
-    
-    
+
     
     tags=['r&b', 'rock', 'jazz', 'techno', 'pop', 'indie',
           'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
