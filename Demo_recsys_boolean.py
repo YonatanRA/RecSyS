@@ -48,7 +48,6 @@ def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, win
     
     
     
-    
     rating=[rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
              party, trips, running, gym, golf, basket, football, yoga]
     
