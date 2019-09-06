@@ -50,6 +50,7 @@ def new_user(df, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, win
     rating=[rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
              party, trips, running, gym, golf, basket, football, yoga]
            
+           
     
     
     n_user={k:v for k, v in list(zip(tags, rating))}
