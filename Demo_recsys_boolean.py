@@ -33,6 +33,7 @@ s_data['plan']=np.random.randint(0, 2, (len(names), 1))
 s_data['id']=[i for i in range(len(names))]
 
 
+
 # new user function
 
 
