@@ -21,6 +21,7 @@ tags=['r&b', 'rock', 'jazz', 'techno', 'pop', 'indie',
       'running', 'gym', 'golf', 'basket', 'football', 'yoga']
 
 
+
 # synth data
 
 data=np.random.randint(0, 2, (len(names), len(tags)))
