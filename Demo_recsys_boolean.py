@@ -13,12 +13,6 @@ import matplotlib.pyplot as plt
 from scipy.spatial.distance import pdist, squareform
 
 
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 423784d2877d83d3983b5e54d28e3e5f1c6ffea5
 # names and tags
 
 names=['id__'+str(i) for i in range(3000)]
