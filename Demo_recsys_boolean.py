@@ -14,6 +14,7 @@ from scipy.spatial.distance import pdist, squareform
 
 
 
+
 # names and tags
 
 names=['id__'+str(i) for i in range(3000)]
@@ -21,6 +22,8 @@ names=['id__'+str(i) for i in range(3000)]
 tags=['r&b', 'rock', 'jazz', 'techno', 'pop', 'indie',
       'cinema', 'theater', 'beers', 'wine', 'party', 'trips',
       'running', 'gym', 'golf', 'basket', 'football', 'yoga']
+
+
 
 
 
