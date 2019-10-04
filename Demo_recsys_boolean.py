@@ -168,6 +168,7 @@ metric='cosine'
 
 
 
+
 # plans (users)
 
 plans=new_user(s_data, rb, rock, jazz, techno, pop, indie, cinema, theater, beers, wine,
