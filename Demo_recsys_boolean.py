@@ -44,7 +44,6 @@ s_data['id']=[i for i in range(len(names))]
 
 
 
-
 # new user function
 
 
